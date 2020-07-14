@@ -3,7 +3,7 @@ image:
 ports:
   - port: 5900
     onOpen: ignore
-  - port: 6080
+  - port: 8080
     onOpen: open-preview
 tasks:
   - init: pip3 install -r requirements.txt
