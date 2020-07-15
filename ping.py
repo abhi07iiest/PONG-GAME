@@ -7,7 +7,7 @@ def ball_animation():
      if ball.top <=0 or ball.bottom >= screen_height:
           ball_speed_y *= -1
      if ball.left <=0:
-          pygame.mixer.Sound.play(score_sound)
+          #pygame.mixer.Sound.play(score_sound)
 
           player1_score += 1
           timer = pygame.time.get_ticks()
@@ -15,14 +15,14 @@ def ball_animation():
 
 
      if ball.right >= screen_width:
-          pygame.mixer.Sound.play(score_sound)
+          #pygame.mixer.Sound.play(score_sound)
 
           player2_score += 1
           timer = pygame.time.get_ticks()
 
 
      if ball.colliderect(player1) and ball_speed_x > 0:
-         pygame.mixer.Sound.play(pong_sound)
+         #pygame.mixer.Sound.play(pong_sound)
          if abs(ball.right-player1.left) < 10:
              ball_speed_x *= -1
          elif abs(ball.bottom-player1.top) < 10 and ball_speed_y > 10:
@@ -32,7 +32,7 @@ def ball_animation():
 
 
      if ball.colliderect(player2) and ball_speed_x < 0:
-          pygame.mixer.Sound.play(pong_sound)
+          #pygame.mixer.Sound.play(pong_sound)
 
           if abs(ball.left-player2.right) < 10:
               ball_speed_x *= -1
@@ -149,8 +149,8 @@ timer = True
 
 #sound
 
-pong_sound = pygame.mixer.Sound('pong.ogg')
-score_sound = pygame.mixer.Sound('score.ogg')
+#pong_sound = pygame.mixer.Sound('pong.ogg')
+#score_sound = pygame.mixer.Sound('score.ogg')
 
 while 1:
      for event in pygame.event.get():
